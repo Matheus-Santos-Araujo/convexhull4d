@@ -108,23 +108,30 @@ vector<Hull> convexhull(vector<Hull>& objs) {
 
         EdgeStack es = EdgeStack();
 
+        srand(1);
         // Random noise
         for (int k = 0; k < hull.vertices.size(); k++) {
-            hull.vertices[k]->x = hull.vertices[k]->x + ((float)rand() / RAND_MAX) / 10;
-            hull.vertices[k]->y = hull.vertices[k]->y + ((float)rand() / RAND_MAX) / 10;
-            hull.vertices[k]->z = hull.vertices[k]->z + ((float)rand() / RAND_MAX) / 10;
+            hull.vertices[k]->x = hull.vertices[k]->x + ((float)rand() / RAND_MAX) / 10000;
+            hull.vertices[k]->y = hull.vertices[k]->y + ((float)rand() / RAND_MAX) / 10000;
+            hull.vertices[k]->z = hull.vertices[k]->z + ((float)rand() / RAND_MAX) / 10000;
         }
 
         // Search 2D
         double minY = 1000000000000;
         Point* startingPoint = hull.vertices[0];
         Point* endPoint = hull.vertices[0];
+        int v1 = 0;
         for (int i = 0; i < hull.vertices.size(); i++) {
+
             if (hull.vertices[i]->y < minY) {
                 minY = hull.vertices[i]->y;
+             //   cout << "aqui \n";
                 startingPoint = hull.vertices[i];
+                v1 = i;
             }
         }
+
+        int v2 = 0;
         for (int j = 0; j < hull.vertices.size(); j++) {
             Edge testEdge = Edge{ startingPoint, endPoint };
             if (testEdge.left(hull.vertices[j])) {
@@ -138,10 +145,8 @@ vector<Hull> convexhull(vector<Hull>& objs) {
         es.data.push_back(Edge{ e.v2, e.v1 });
 
         vector<Face> hullFaces;
-
         while (!es.isEmpty()) {
             e = es.get();
-
             // Search
             int i;
 

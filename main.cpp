@@ -5,7 +5,8 @@
 
 #include <algorithm>
 #include<GL/freeglut.h>
-
+#include<chrono>
+#include<thread>
 #include "convexhull.h"
 
 int width = 800, height = 800;
@@ -14,6 +15,9 @@ float resolutionx = width * 1.0f;
 float resolutiony = height * 1.0f;
 float fovx = 2.0f / width;
 float fovy = 2.0f / height;
+bool tint, fourd = false;
+int t = 0;
+int T = 8;
 
 Hull obj;
 vector<Hull> objs, hulls;
@@ -33,13 +37,14 @@ void printhull(const Hull& o) {
 	glLineWidth(1.0f);
 	for (const Face& t : o.faces) {
 
-		/*	glColor3f(0.8, 0.1, 0.1);
+		if (tint) {
+			glColor3f(0.8, 0.1, 0.1);
 			glBegin(GL_TRIANGLES);
 			for (int i = 0; i < 3; i++) {
 				glVertex3f(t.p[i]->x, t.p[i]->y, t.p[i]->z);
 			}
-			glEnd();*/
-
+			glEnd();
+		}
 		Point n = t.normal();
 		n.norm();
 		glColor3f(0.1f, 0.1f, 0.1f);
@@ -89,14 +94,6 @@ void loader(string name) {
 			obj.add_vertex(p);
 			objs[num_objs].add_vertex(p);
 		}
-
-		/*else if (line.substr(0, 2) == "f ") {
-			const char* chh = line.c_str();
-			sscanf_s(chh, "f %i/%i/%i %i/%i/%i %i/%i/%i", &a, &A, &i, &b, &B, &j, &c, &C, &k);
-
-			objs[num_objs].add_face(Face{ obj.vertices[a - 1], obj.vertices[b - 1], obj.vertices[c - 1] });
-
-		}*/
 	}
 }
 
@@ -130,11 +127,69 @@ void disp(void) {
 		glEnd();
 	}
 
-	for (const Hull& o : hulls) {
-		printhull(o);
+	if (fourd == true && t < T) {
+		    t += 1;
+		    objs.clear();
+			obj.clear();
+			hulls.clear();
+			std::stringstream ss;
+			ss << "mywind" << t << ".obj";
+			string frame = ss.str();
+			cout << frame << "\n";
+			loader(frame);
+			hulls = convexhull(objs);
+
+			this_thread::sleep_for(chrono::milliseconds(3000));
 	}
+	
+		for (const Hull& o : hulls) {
+			printhull(o);
+		}
 
 	glutSwapBuffers();
+
+}
+
+void keyboard(unsigned char key, int /*x*/, int /*y*/) {
+
+	switch (key) {
+
+	case(27): exit(0);
+	case(' '):
+		break;
+	case('o'):
+		fourd = false;
+		objs.clear();
+		// Descomentar modelo .obj desejado
+		//loader("exemp.obj");
+		//loader("mywind1.obj");
+		loader("cube.obj");
+		hulls = convexhull(objs);
+		break;
+	case('p'):
+		tint = true;
+		break;
+	case('a'):
+		tint = false;
+		break;
+	// Tema 4D
+	case('t'):
+		fourd = true;
+		break;
+	}
+	glutPostRedisplay();
+}
+
+void tick(int m) {
+
+	//Redraw the display
+	glutPostRedisplay();
+
+	/*recall timer func in 33 milliseconds
+	redraw every 33 milliseconds which is
+	approximatly=1000/33=30 frames per seconds
+	*/
+	glutTimerFunc(33, tick, 0);
 
 }
 
@@ -156,14 +211,9 @@ int main(int argc, char** argv) {
 	glEnable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
 
-	// Descomentar modelo .obj desejado
-	//loader("exemp.obj");
-	//loader("jav.obj");
-	//loader("cube.obj");
-	loader("mywind.obj");
-	hulls = convexhull(objs);
 	glutDisplayFunc(disp);
-
+	glutKeyboardFunc(keyboard);
+	glutTimerFunc(33, tick, 0);
 	glutMainLoop();
 
 	cin.get();
