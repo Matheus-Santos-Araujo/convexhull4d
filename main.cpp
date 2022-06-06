@@ -16,11 +16,11 @@ float resolutiony = height * 1.0f;
 float fovx = 2.0f / width;
 float fovy = 2.0f / height;
 bool tint, fourd = false;
-int t = 0;
+int t;
 int T = 8;
 
 Hull obj;
-vector<Hull> objs, hulls;
+vector<Hull> objects, hulls;
 
 void printhull(const Hull& o) {
 
@@ -83,7 +83,7 @@ void loader(string name) {
 
 		if (line.substr(0, 2) == "o ") {
 			num_objs++;
-			objs.push_back(Hull());
+			objects.push_back(Hull());
 		}
 
 		else if (line.substr(0, 2) == "v ") {
@@ -91,8 +91,8 @@ void loader(string name) {
 			v >> x; v >> y; v >> z;
 			Point* p = new Point{ x, y, z };
 
-			obj.add_vertex(p);
-			objs[num_objs].add_vertex(p);
+			obj.addv(p);
+			objects[num_objs].addv(p);
 		}
 	}
 }
@@ -111,7 +111,7 @@ void disp(void) {
 		glLoadIdentity();
 
 		gluLookAt(
-			5, 2, -2,
+			6, 2, -2,
 			0, 2, 0,
 			0, 1, 0);
 
@@ -129,7 +129,7 @@ void disp(void) {
 
 	if (fourd == true && t < T) {
 		    t += 1;
-		    objs.clear();
+			objects.clear();
 			obj.clear();
 			hulls.clear();
 			std::stringstream ss;
@@ -137,9 +137,9 @@ void disp(void) {
 			string frame = ss.str();
 			cout << frame << "\n";
 			loader(frame);
-			hulls = convexhull(objs);
+			hulls = convexhull(objects);
 
-			this_thread::sleep_for(chrono::milliseconds(3000));
+			this_thread::sleep_for(chrono::milliseconds(2000));
 	}
 	
 		for (const Hull& o : hulls) {
@@ -159,12 +159,12 @@ void keyboard(unsigned char key, int /*x*/, int /*y*/) {
 		break;
 	case('o'):
 		fourd = false;
-		objs.clear();
-		// Descomentar modelo .obj desejado
-		//loader("exemp.obj");
+		objects.clear();
+		// Descomentar modelo .obj 3D desejado
 		//loader("mywind1.obj");
+		//loader("exemp.obj");
 		loader("cube.obj");
-		hulls = convexhull(objs);
+		hulls = convexhull(objects);
 		break;
 	case('p'):
 		tint = true;
@@ -175,6 +175,7 @@ void keyboard(unsigned char key, int /*x*/, int /*y*/) {
 	// Tema 4D
 	case('t'):
 		fourd = true;
+		t = 0;
 		break;
 	}
 	glutPostRedisplay();

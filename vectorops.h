@@ -53,31 +53,3 @@ double get3x3Determinant(std::vector<std::vector<double>>& m)
     }
     return det;
 }
-
-double get4x4Determinant(std::vector<std::vector<double>>& m)
-{
-    double det = 0;
-    for (int i = 0; i < 4; i++)
-    {
-        std::vector<std::vector<double>> minor(3, std::vector<double>(3));
-        for (int j = 1; j < 4; j++) {
-            int column = 0;
-            for (int k = 0; k < 4; k++) {
-                if (k == i) {
-                    continue;
-                }
-                else {
-                    minor[j - 1][column] = m[j][k];
-                    column++;
-                }
-            }
-        }
-        if (i % 2 == 0) {
-            det += m[0][i] * get3x3Determinant(minor);
-        }
-        else {
-            det -= m[0][i] * get3x3Determinant(minor);
-        }
-    }
-    return det;
-}

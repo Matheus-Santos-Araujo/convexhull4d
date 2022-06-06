@@ -2,40 +2,40 @@
 C:\Users\matuf\source\repos\Convex-Hull\vectorops.h(14,49): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
 C:\Users\matuf\source\repos\Convex-Hull\vectorops.h(19,50): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
 C:\Users\matuf\source\repos\Convex-Hull\vectorops.h(29,38): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(31,27): warning C4244: 'argumento': conversão de 'const double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(31,21): warning C4244: 'argumento': conversão de 'const double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(31,15): warning C4244: 'argumento': conversão de 'const double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(40,27): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(43,44): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(43,33): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(43,22): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(52,43): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(52,32): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(52,21): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(53,73): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(53,52): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(53,31): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(56,43): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(56,32): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(56,21): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(57,73): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(57,52): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(57,31): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(68,9): warning C4101: 'B': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(67,6): warning C4101: 'a': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(69,12): warning C4101: 'k': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(67,9): warning C4101: 'b': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(69,9): warning C4101: 'j': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(69,6): warning C4101: 'i': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(67,12): warning C4101: 'c': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(68,6): warning C4101: 'A': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(68,12): warning C4101: 'C': variável local não referenciada
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(105,33): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(105,20): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(106,15): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(106,44): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(206,32): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(206,19): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(207,14): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
-C:\Users\matuf\source\repos\Convex-Hull\main.cpp(207,43): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(32,27): warning C4244: 'argumento': conversão de 'const double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(32,21): warning C4244: 'argumento': conversão de 'const double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(32,15): warning C4244: 'argumento': conversão de 'const double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(41,27): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(44,44): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(44,33): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(44,22): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(53,43): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(53,32): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(53,21): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(54,73): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(54,52): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(54,31): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(57,43): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(57,32): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(57,21): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(58,73): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(58,52): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(58,31): warning C4244: 'argumento': conversão de 'double' para 'GLfloat', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(69,9): warning C4101: 'B': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(68,6): warning C4101: 'a': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(70,12): warning C4101: 'k': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(68,9): warning C4101: 'b': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(70,9): warning C4101: 'j': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(70,6): warning C4101: 'i': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(68,12): warning C4101: 'c': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(69,6): warning C4101: 'A': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(69,12): warning C4101: 'C': variável local não referenciada
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(106,33): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(106,20): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(107,15): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(107,44): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(208,32): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(208,19): warning C4244: 'argumento': conversão de 'float' para 'GLsizei', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(209,14): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
+C:\Users\matuf\source\repos\Convex-Hull\main.cpp(209,43): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
   Convex-Hull.vcxproj -> C:\Users\matuf\source\repos\Convex-Hull\x64\Debug\Convex-Hull.exe
